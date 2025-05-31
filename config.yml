@@ -1,0 +1,66 @@
+# === Effects Configuration ===
+# Add any number of potion effects here.
+# Each effect must follow this format and use proper YAML indentation.
+# After, run /effectsreload
+
+effects:
+
+  speed:
+    type: SPEED              # Effect type (must be uppercase and valid in Minecraft)
+    amplifier: 1             # 0 = level I, 1 = level II, etc.
+    duration: 999999         # Duration in ticks (20 ticks = 1 second)
+    ambient: true            # If true, has a subtle effect with no particles
+    particles: false         # Show particles (true/false)
+    enabled: true            # Set to false to disable this effect
+
+  nightvision:
+    type: NIGHT_VISION
+    amplifier: 0
+    duration: 999999
+    ambient: false
+    particles: true
+    enabled: true
+
+  strength:
+    type: STRENGTH
+    amplifier: 2
+    duration: 999999
+    ambient: true
+    particles: true
+    enabled: false
+
+  invisibility:
+    type: INVISIBILITY
+    amplifier: 0
+    duration: 999999
+    ambient: false
+    particles: false
+    enabled: true
+
+  haste:
+    type: HASTE
+    amplifier: 2
+    duration: 999999
+    ambient: false
+    particles: false
+    enabled: true
+
+# === How to Add More Effects ===
+# Copy the structure below and paste it under "effects:"
+#
+#   effect_name:
+#     type: EFFECT_TYPE
+#     amplifier: 0
+#     duration: 999999
+#     ambient: false
+#     particles: false
+#     enabled: true
+#
+# Example:
+#   jumpboost:
+#     type: JUMP
+#     amplifier: 1
+#     duration: 999999
+#     ambient: true
+#     particles: false
+#     enabled: true
