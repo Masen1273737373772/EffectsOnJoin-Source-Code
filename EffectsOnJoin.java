@@ -62,6 +62,9 @@ public class EffectsOnJoin extends JavaPlugin implements Listener {
     }
 
     private void applyPotionEffectsFromConfig(Player player) {
+        if (!player.hasPermission("effectsonjoin.apply")) {
+            return;
+        }
         ConfigurationSection effectsSection = getConfig().getConfigurationSection("effects");
         if (effectsSection == null) return;
 
