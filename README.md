@@ -1,30 +1,43 @@
 # EffectsOnJoin-Source-Code
 
-EffectsOnJoin is a lightweight Minecraft plugin that grants configurable potion effects to players when they join or respawn on your server. Perfect for RPG, lobby, or custom game servers!
+EffectsOnJoin
 
-✨ Features:
+EffectsOnJoin is a lightweight, easy-to-use Minecraft plugin that automatically grants players customizable potion effects when they join or respawn. Ideal for RPG servers, lobby hubs, or custom game modes!
 
-Fully configurable potion effects via config.yml
+ Features
 
-Supports unlimited effects
+• Apply any potion effect on player join or respawn
 
-LuckPerms-compatible (effectsonjoin.apply)
+• Fully customizable effects via config.yml
 
-Reload config live with /effectsreload
+• Toggle particles, icons, and ambient effect visuals
 
-Works on join and respawn events
+• Supports modern Minecraft versions (1.20+)
 
-Designed for Paper 1.20+ / 1.21
+• Reload configuration live with /effectsreload
 
-🔧 Commands:
+• Permissions support:
 
-/effectsreload — Reloads the config without restarting
-(Permission: effectsonjoin.reload)
+• effectsonjoin.apply — grants effects to players
 
-📜 Permissions:
+• effectsonjoin.reload — reloads plugin config
 
-effectsonjoin.apply — Required for players to receive effects
+How to Use
 
-effectsonjoin.reload — Allows using the reload command
+1. Drop the plugin JAR into your plugins/ folder
+
+2. Start or reload your server
+
+3. Edit the config.yml to add or customize effects
+
+4. Run /effectsreload to apply changes without restarting the server
+
+  Why EffectsOnJoin?
+
+ • Actively maintained and updated for the latest Minecraft server versions
+
+• A modern, clean alternative to older plugins like JoinEffect (last updated    in 2018)
+
+• Compatible with popular Bukkit forks like Paper and Purpur
 
 EffectsOnJoin -> https://modrinth.com/plugin/effectsonjoin
