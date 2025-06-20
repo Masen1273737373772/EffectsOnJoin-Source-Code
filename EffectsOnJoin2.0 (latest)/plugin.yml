@@ -1,0 +1,18 @@
+name: EffectsOnJoin
+version: 2.0
+main: com.effects.effectsonjoin.EffectsOnJoin
+api-version: 1.20
+
+commands:
+  effectsreload:
+    description: Reloads the EffectsOnJoin Config
+    usage: /effectsreload
+    permission: effectsonjoin.reload
+
+permissions:
+  effectsonjoin.reload:
+    description: Allows reloading EffectsOnJoin Config
+    default: op
+  effectsonjoin.apply:
+    description: The permission to be granted effects on Join/Respawn
+    default: true

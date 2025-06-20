@@ -1,0 +1,88 @@
+# === EffectsOnJoin Configuration ===
+# This config controls what potion effects are applied to players when they join or respawn.
+# You can define effects globally, or per specific world.
+# Supports conditions like first-join only and time-based triggers (day/night).
+
+effects:
+
+  # === 🌍 World: world_nether ===
+  # These effects only apply when the player is in the Nether (world_nether)
+  world_nether:
+    fire_resist_firstjoin:
+      type: FIRE_RESISTANCE         # Potion effect type (must be valid and uppercase)
+      amplifier: 1                  # Effect strength: 0 = Level I, 1 = Level II, etc.
+      duration: 999999              # Duration in ticks (20 ticks = 1 second)
+      ambient: true                 # Subtle visual effect (no particles)
+      particles: false              # Show potion particles
+      enabled: true                 # Enable or disable this effect
+      first_join_only: true         # Only apply this effect the first time a player joins
+      only_at_time: NIGHT           # Apply only at night (options: ANY, DAY, NIGHT)
+
+  # === 🌍 World: world ===
+  world:
+    haste_on_join:
+      type: HASTE
+      amplifier: 2
+      duration: 999999
+      ambient: false
+      particles: false
+      enabled: true
+      first_join_only: false
+      only_at_time: ANY
+
+    night_vision_at_night:
+      type: NIGHT_VISION
+      amplifier: 0
+      duration: 999999
+      ambient: false
+      particles: true
+      enabled: true
+      only_at_time: NIGHT
+
+  # === 🌐 Global Effects ===
+  # These effects apply in all worlds unless overridden
+  global:
+    speed:
+      type: SPEED
+      amplifier: 1
+      duration: 999999
+      ambient: true
+      particles: false
+      enabled: true
+
+    invisibility:
+      type: INVISIBILITY
+      amplifier: 0
+      duration: 999999
+      ambient: false
+      particles: false
+      enabled: true
+
+    strength:
+      type: STRENGTH
+      amplifier: 2
+      duration: 999999
+      ambient: true
+      particles: true
+      enabled: false  # This will remove the effect if the player currently has it
+
+# === 🌐 Add Custom Worlds ===
+# You can define effects for any custom world by using the exact name of your world.
+# Example:
+#
+#   my_custom_world:
+#     jumpboost:
+#       type: JUMP_BOOST
+#       amplifier: 1
+#       duration: 999999
+#       ambient: false
+#       particles: true
+#       enabled: true
+#
+# Make sure the world name matches the folder name or name from the /worlds command.
+
+# === 🔧 Notes ===
+# ➤ Valid values for only_at_time: ANY, DAY, NIGHT
+# ➤ first_join_only: true means the effect is only applied once per player (on their first join ever)
+# ➤ You can add as many effects per world as you like
+# ➤ To disable an effect, set enabled: false (it will also remove the effect from players if active)
