@@ -1,43 +1,71 @@
-# EffectsOnJoin-Source-Code
+🔮 EffectsOnJoin
+EffectsOnJoin is a lightweight, highly customizable plugin that automatically applies potion effects to players when they join, respawn, switch worlds, or when the world transitions between day and night.
 
-EffectsOnJoin
+Perfect for RPG servers, lobby effects, gamemode-specific challenges, or immersive world environments.
 
-EffectsOnJoin is a lightweight, easy-to-use Minecraft plugin that automatically grants players customizable potion effects when they join or respawn. Ideal for RPG servers, lobby hubs, or custom game modes!
+✨ Features
 
- Features
+Automatically apply potion effects when players:
 
-• Apply any potion effect on player join or respawn
+Join the server
 
-• Fully customizable effects via config.yml
+Respawn after dying
 
-• Toggle particles, icons, and ambient effect visuals
+Switch to a different world
 
-• Supports modern Minecraft versions (1.20+)
+Experience a time change (Day ↔ Night)
 
-• Reload configuration live with /effectsreload
+World-Specific and Global Config Support
+Configure potion effects per world or use global settings for all players.
 
-• Permissions support:
+Gamemode-Specific Conditions
+Apply effects only to players in specific gamemodes: Survival, Creative, Adventure, Spectator, or All.
 
-• effectsonjoin.apply — grants effects to players
+First-Join Effects
+Trigger effects only the first time a player joins the server.
 
-• effectsonjoin.reload — reloads plugin config
+Time-Based Triggers
+Choose whether effects apply during the day, night, or all the time.
 
-How to Use
+Live Configuration Reload
+Use /effectsreload to reload the config without restarting the server.
 
-1. Drop the plugin JAR into your plugins/ folder
+Effect Removal
+Disabled effects are automatically removed from players when specified in the config.
 
-2. Start or reload your server
+Compatible With:
 
-3. Edit the config.yml to add or customize effects
+Spigot
 
-4. Run /effectsreload to apply changes without restarting the server
+Paper
 
-  Why EffectsOnJoin?
+Purpur
 
- • Actively maintained and updated for the latest Minecraft server versions
+Any Bukkit-based fork
 
-• A modern, clean alternative to older plugins like JoinEffect (last updated    in 2018)
+🔐 Permissions
 
-• Compatible with popular Bukkit forks like Paper and Purpur
+effectsonjoin.apply – Allows the player to receive effects (Default: ✅ Enabled)
 
-EffectsOnJoin -> https://modrinth.com/plugin/effectsonjoin
+effectsonjoin.reload – Allows the use of /effectsreload (Default: ❌ OP only)
+
+📘 Configuration Notes
+
+Potion effects are applied based on:
+
+World
+
+Gamemode
+
+Time of day (DAY/NIGHT/ANY)
+
+First-time join status
+
+Effects can be fully customized, disabled, or removed dynamically.
+
+Example setting:
+
+Give players Night Vision only at night and only in Survival mode
+
+Apply Speed in all worlds and all gamemodes
+
