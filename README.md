@@ -1,4 +1,6 @@
 🔮 EffectsOnJoin
+
+
 EffectsOnJoin is a lightweight, highly customizable plugin that automatically applies potion effects to players when they join, respawn, switch worlds, or when the world transitions between day and night.
 
 Perfect for RPG servers, lobby effects, gamemode-specific challenges, or immersive world environments.
